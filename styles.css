@@ -979,74 +979,11 @@ footer {
     text-transform: lowercase;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 40px;
-}
-
-.footer-left {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.legitscript-badge {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, #1a3a52 0%, #0f2537 100%);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 10px;
-}
-
-.footer-links {
-    color: white;
-}
-
-.footer-links a {
-    display: block;
-    color: #999;
-    text-decoration: none;
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-right {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-right a {
-    color: #999;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
-
-.footer-right a:hover {
-    color: white;
-}
-
 .footer-bottom {
     color: #666;
-    font-size: 0.85rem;
-    padding-top: 20px;
-    border-top: 1px solid #222;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    text-align: center;
 }
 
 /* Responsive Stats Section */
@@ -1405,12 +1342,12 @@ footer {
 
 /* RSVP Section */
 .rsvp-section {
-    background: white;
-    padding: 100px 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 120px 40px;
 }
 
 .rsvp-container {
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
 }
@@ -1419,32 +1356,44 @@ footer {
     font-size: 3.5rem;
     color: #1a1a1a;
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .rsvp-subheading {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #666;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
     line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form-wrapper {
-    background: #f9f9f9;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: white;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e8e8e8;
 }
 
 .form-wrapper iframe {
     width: 100%;
-    min-height: 600px;
+    min-height: 650px;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Responsive RSVP Section */
+@media (max-width: 1024px) {
+    .rsvp-container {
+        max-width: 600px;
+    }
+}
+
 @media (max-width: 768px) {
     .rsvp-section {
-        padding: 60px 20px;
+        padding: 80px 20px;
     }
 
     .rsvp-heading {
@@ -1453,6 +1402,30 @@ footer {
 
     .rsvp-subheading {
         font-size: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .form-wrapper {
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .form-wrapper iframe {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rsvp-section {
+        padding: 60px 16px;
+    }
+
+    .rsvp-heading {
+        font-size: 1.8rem;
+    }
+
+    .rsvp-subheading {
+        font-size: 1rem;
         margin-bottom: 2rem;
     }
 
@@ -1462,29 +1435,7 @@ footer {
     }
 
     .form-wrapper iframe {
-        min-height: 500px;
-    }
-}
-
-@media (max-width: 480px) {
-    .rsvp-section {
-        padding: 40px 16px;
-    }
-
-    .rsvp-heading {
-        font-size: 1.8rem;
-    }
-
-    .rsvp-subheading {
-        font-size: 1rem;
-    }
-
-    .form-wrapper {
-        padding: 20px;
-    }
-
-    .form-wrapper iframe {
-        min-height: 450px;
+        min-height: 550px;
     }
 }
 
@@ -1502,26 +1453,12 @@ footer {
 
     .footer-logo {
         font-size: 6rem;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .footer-left {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-links {
-        width: 100%;
-    }
-
-    .legitscript-badge {
-        margin: 0 auto;
+    .footer-bottom {
+        margin-top: 30px;
+        font-size: 0.85rem;
     }
 }
 
@@ -1532,15 +1469,11 @@ footer {
 
     .footer-logo {
         font-size: 4rem;
-        margin-bottom: 30px;
-    }
-
-    .footer-links a,
-    .footer-right a {
-        font-size: 0.9rem;
+        margin-bottom: 24px;
     }
 
     .footer-bottom {
         font-size: 0.8rem;
+        margin-top: 24px;
     }
 }
