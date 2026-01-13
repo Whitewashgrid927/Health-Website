@@ -784,6 +784,426 @@ button, a, .tab-btn, .faq-question {
     }
 }
 
+/* Why Attend Section */
+.why-attend-section {
+    background: #1a1a1a;
+    padding: 120px 40px;
+}
+
+.why-attend-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.why-attend-title {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: #999;
+    margin-bottom: 80px;
+    font-weight: 400;
+}
+
+.why-attend-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.why-attend-card {
+    color: white;
+}
+
+.why-attend-card:first-child {
+    grid-column: 1 / -1;
+}
+
+.why-attend-card h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.why-attend-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #d0d0d0;
+}
+
+/* Responsive Why Attend Section */
+@media (max-width: 1024px) {
+    .why-attend-grid {
+        gap: 50px;
+    }
+
+    .why-attend-card h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-attend-section {
+        padding: 80px 20px;
+    }
+
+    .why-attend-title {
+        margin-bottom: 60px;
+    }
+
+    .why-attend-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .why-attend-card:first-child {
+        grid-column: 1;
+    }
+
+    .why-attend-card h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .why-attend-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .why-attend-section {
+        padding: 60px 16px;
+    }
+
+    .why-attend-title {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    .why-attend-grid {
+        gap: 40px;
+    }
+
+    .why-attend-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .why-attend-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+/* Ticket Selection Section */
+.ticket-section {
+    background: #1a1a1a;
+    padding: 120px 40px;
+}
+
+.ticket-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ticket-title {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: #999;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.ticket-heading {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 60px;
+    font-weight: 400;
+}
+
+.ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.ticket-card {
+    border: 2px dashed #666;
+    border-radius: 20px;
+    padding: 50px;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.ticket-card:hover {
+    border-color: #999;
+}
+
+.ticket-content h4 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.ticket-details {
+    margin-bottom: 3rem;
+}
+
+.ticket-location {
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.ticket-price {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.ticket-note {
+    font-size: 0.95rem;
+    color: #999;
+}
+
+.ticket-button {
+    background: white;
+    color: #1a1a1a;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.ticket-button:hover {
+    background: #f0f0f0;
+}
+
+/* Responsive Ticket Section */
+@media (max-width: 1024px) {
+    .ticket-heading {
+        font-size: 3rem;
+    }
+
+    .ticket-content h4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ticket-section {
+        padding: 80px 20px;
+    }
+
+    .ticket-heading {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .ticket-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .ticket-card {
+        padding: 40px;
+    }
+
+    .ticket-content h4 {
+        font-size: 2rem;
+    }
+
+    .ticket-location {
+        font-size: 1.1rem;
+    }
+
+    .ticket-price {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ticket-section {
+        padding: 60px 16px;
+    }
+
+    .ticket-heading {
+        font-size: 1.8rem;
+    }
+
+    .ticket-card {
+        padding: 30px;
+    }
+
+    .ticket-content h4 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ticket-location {
+        font-size: 1rem;
+    }
+
+    .ticket-price {
+        font-size: 1.5rem;
+    }
+
+    .ticket-button {
+        padding: 14px 32px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Registration CTA Section */
+.registration-cta-section {
+    background: #1a1a1a;
+    padding: 150px 40px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.registration-cta-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.registration-cta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.cta-label {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: #999;
+    font-weight: 400;
+}
+
+.cta-price {
+    font-size: 5rem;
+    color: white;
+    font-weight: 400;
+}
+
+.registration-cta-content h2 {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.cta-link {
+    font-size: 5rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px dashed white;
+    display: inline-block;
+    margin-bottom: 2rem;
+    transition: opacity 0.3s ease;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.cta-link:hover {
+    opacity: 0.8;
+}
+
+.cta-note {
+    font-size: 2rem;
+    color: white;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+/* Responsive Registration CTA */
+@media (max-width: 1024px) {
+    .registration-cta-content h2 {
+        font-size: 4rem;
+    }
+
+    .cta-link {
+        font-size: 4rem;
+    }
+
+    .cta-price {
+        font-size: 4rem;
+    }
+
+    .cta-note {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-cta-section {
+        padding: 100px 20px;
+    }
+
+    .registration-cta-header {
+        margin-bottom: 60px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .registration-cta-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-link {
+        font-size: 2.5rem;
+        border-bottom: 2px dashed white;
+    }
+
+    .cta-price {
+        font-size: 3rem;
+    }
+
+    .cta-note {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-cta-section {
+        padding: 80px 16px;
+    }
+
+    .registration-cta-header {
+        margin-bottom: 40px;
+    }
+
+    .cta-label {
+        font-size: 0.9rem;
+    }
+
+    .registration-cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-link {
+        font-size: 2rem;
+    }
+
+    .cta-price {
+        font-size: 2.5rem;
+    }
+
+    .cta-note {
+        font-size: 1.1rem;
+    }
+}
+
 /* Statistics Bento Grid Section */
 .stats-section {
     background: #f5f1ed;
