@@ -1,0 +1,1048 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-btn {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background: #f0f0f0;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Landing Section */
+.landing-section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #c9b5a0 0%, #a89080 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 60px 40px;
+}
+
+.landing-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+}
+
+.hero-text {
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    opacity: 0.95;
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.feature-card:first-child {
+    grid-column: 1 / -1;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 12px;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 20px;
+    }
+
+    .landing-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .feature-cards {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .landing-section {
+        padding: 80px 20px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card:first-child {
+        grid-column: 1;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+}
+
+/* Bento Grid Section */
+.bento-section {
+    background: #f5f1ed;
+    padding: 100px 40px;
+}
+
+.bento-heading {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 60px;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+.bento-heading .highlight {
+    color: #b8776e;
+}
+
+.bento-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.bento-card {
+    background: #ebe4dc;
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 400px;
+}
+
+.card-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #3a2820;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    color: #5a4a42;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Lab Visit Card */
+.lab-visit-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 40px;
+}
+
+.lab-visit-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.visit-date {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.calendar-icon {
+    font-size: 1.5rem;
+}
+
+.visit-date .date {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+}
+
+.visit-date .time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Results Gauge */
+.results-visual {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.gauge-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #8b5a4a 0%, #5a3a2a 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gauge {
+    width: 180px;
+    height: 180px;
+    transform: rotate(-90deg);
+}
+
+.gauge circle:nth-child(2) {
+    stroke-dashoffset: 188;
+}
+
+.gauge circle:nth-child(3) {
+    stroke-dashoffset: 63;
+}
+
+.gauge-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.gauge-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.gauge-status {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Placeholder cards */
+.card-placeholder {
+    background: #d4cbbf;
+}
+
+/* Responsive Bento Grid */
+@media (max-width: 1024px) {
+    .bento-heading {
+        font-size: 3rem;
+    }
+
+    .bento-grid {
+        gap: 15px;
+    }
+
+    .bento-card {
+        padding: 30px;
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-section {
+        padding: 60px 20px;
+    }
+
+    .bento-heading {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-card {
+        padding: 24px;
+        min-height: 300px;
+    }
+
+    .card-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .card-content p {
+        font-size: 1rem;
+    }
+
+    .gauge-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .gauge {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gauge-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bento-heading {
+        font-size: 1.8rem;
+    }
+
+    .bento-card {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Interactive Tabs Section */
+.tabs-section {
+    background: white;
+    padding: 100px 40px;
+}
+
+.tabs-header {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.tabs-left h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+.tabs-left .highlight {
+    color: #c57d68;
+}
+
+.tabs-right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.tabs-right p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Tabs Navigation */
+.tabs-navigation {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 50px;
+    scrollbar-width: none;
+}
+
+.tabs-navigation::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    color: #333;
+    font-weight: 500;
+}
+
+.tab-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn.active {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs Content */
+.tabs-content-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+
+.tabs-content-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tabs-content-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.tabs-content-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.tabs-content-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.tabs-content {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.tab-panel {
+    min-width: calc(33.333% - 14px);
+    flex-shrink: 0;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-panel.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.health-card {
+    background: linear-gradient(135deg, #b89c8a 0%, #9a826f 100%);
+    border-radius: 20px;
+    padding: 40px;
+    min-height: 300px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.health-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 0 20px 20px 0;
+}
+
+.health-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.health-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 80%;
+    position: relative;
+    z-index: 2;
+}
+
+/* CTA Button */
+.cta-button-container {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+.cta-button {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #333;
+}
+
+/* Responsive Tabs Section */
+@media (max-width: 1024px) {
+    .tabs-header {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .tabs-left h2 {
+        font-size: 2.8rem;
+    }
+
+    .tab-panel {
+        min-width: calc(45% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs-section {
+        padding: 60px 20px;
+    }
+
+    .tabs-left h2 {
+        font-size: 2.2rem;
+    }
+
+    .tabs-right h3 {
+        font-size: 1.3rem;
+    }
+
+    .tabs-right p {
+        font-size: 1rem;
+    }
+
+    .tabs-navigation {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .tab-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .tab-panel {
+        min-width: 80%;
+    }
+
+    .health-card {
+        padding: 30px;
+        min-height: 250px;
+    }
+
+    .health-card h3 {
+        font-size: 2rem;
+    }
+
+    .health-card p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs-left h2 {
+        font-size: 1.8rem;
+    }
+
+    .health-card {
+        padding: 24px;
+    }
+
+    .health-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .cta-button {
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+}
+
+/* Statistics Bento Grid Section */
+.stats-section {
+    background: #f5f1ed;
+    padding: 100px 40px;
+}
+
+.stats-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.stat-card {
+    background: #ebe4dc;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card-large h3 {
+    font-size: 2.5rem;
+    color: #6b4e3d;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.stat-card-large p {
+    font-size: 1.1rem;
+    color: #6b4e3d;
+}
+
+.stat-card-hero {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #3d3d3d 0%, #2d2d2d 100%);
+    min-height: 400px;
+}
+
+.stat-card-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.stat-content {
+    position: relative;
+    z-index: 2;
+}
+
+.stat-card-hero h3 {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.stat-card-hero p {
+    font-size: 1.2rem;
+    color: white;
+    max-width: 500px;
+}
+
+.cta-button-dark {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.cta-button-dark:hover {
+    background: #333;
+}
+
+.phone-mockup {
+    width: 150px;
+    height: 250px;
+    background: linear-gradient(135deg, #8b5a4a 0%, #5a3a2a 100%);
+    border-radius: 20px;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: white;
+    padding: 100px 40px;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #6b4e3d;
+    font-weight: 500;
+}
+
+.faq-icon {
+    font-size: 2rem;
+    color: #333;
+    background: #f5f5f5;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    padding: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 20px 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 80px 40px 40px;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 12rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 0.9;
+    margin-bottom: 60px;
+    text-transform: lowercase;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.legitscript-badge {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #1a3a52 0%, #0f2537 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-links {
+    color: white;
+}
+
+.footer-links a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-right {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right a {
+    color: #999;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-right a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    color: #666;
+    font-size: 0.85rem;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+}
+
+/* Responsive Stats Section */
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 60px 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 30px;
+    }
+
+    .stat-card-large h3 {
+        font-size: 2rem;
+    }
+
+    .stat-card-hero {
+        min-height: 300px;
+    }
+
+    .stat-card-hero h3 {
+        font-size: 3.5rem;
+    }
+
+    .stat-card-hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive FAQ Section */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 60px 20px;
+    }
+
+    .faq-question {
+        font-size: 1.2rem;
+    }
+
+    .faq-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .faq-answer p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 60px 20px 30px;
+    }
+
+    .footer-logo {
+        font-size: 6rem;
+        margin-bottom: 40px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

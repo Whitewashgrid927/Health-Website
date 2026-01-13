@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Section -->
+    <section class="landing-section">
+        <div class="landing-content">
+            <div class="hero-text">
+                <h1>Advanced insights<br>for better health</h1>
+                <p>Annual lab test of 130+ biomarkers, checking for indicators of 1,000+ conditions*—all for just $499 per year.</p>
+            </div>
+
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>130+ lab tests</h3>
+                    <p>Check indicators of 1,000+ conditions*</p>
+                </div>
+                <div class="feature-card">
+                    <h3>2x per year</h3>
+                    <p>Track progress over time</p>
+                </div>
+                <div class="feature-card">
+                    <h3>No insurance</h3>
+                    <p>Clear, upfront costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Section -->
+    <section class="bento-section">
+        <h2 class="bento-heading">
+            A snapshot of your<br>
+            health, <span class="highlight">plus the<br>
+            power to change it</span>
+        </h2>
+
+        <div class="bento-grid">
+            <!-- Book your test card -->
+            <div class="bento-card card-book">
+                <div class="card-content">
+                    <h3>Book your test</h3>
+                    <p>In the app for a lab draw near you at one of over 2000+ locations.</p>
+
+                    <div class="lab-visit-card">
+                        <h4>Your lab visit</h4>
+                        <div class="visit-date">
+                            <span class="calendar-icon">📅</span>
+                            <div>
+                                <p class="date">Monday, Aug 18</p>
+                                <p class="time">10:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Get your results card -->
+            <div class="bento-card card-results">
+                <div class="card-content">
+                    <h3>Get your results</h3>
+                    <p>To know which areas of your health need the most attention.</p>
+
+                    <div class="results-visual">
+                        <div class="gauge-container">
+                            <svg class="gauge" viewBox="0 0 200 200">
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#e0e0e0" stroke-width="20"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#ff8c5a" stroke-width="20"
+                                        stroke-dasharray="251" stroke-dashoffset="125" stroke-linecap="round"/>
+                                <circle cx="100" cy="100" r="80" fill="none" stroke="#4ade80" stroke-width="20"
+                                        stroke-dasharray="251" stroke-dashoffset="0" stroke-linecap="round"/>
+                            </svg>
+                            <div class="gauge-label">
+                                <span class="gauge-number">66</span>
+                                <span class="gauge-status">Optimal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder cards for a complete bento grid -->
+            <div class="bento-card card-placeholder">
+                <div class="card-content">
+                    <h3>Track progress</h3>
+                    <p>Monitor your health metrics over time.</p>
+                </div>
+            </div>
+
+            <div class="bento-card card-placeholder">
+                <div class="card-content">
+                    <h3>Expert guidance</h3>
+                    <p>Get personalized recommendations from healthcare professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Tabs Section -->
+    <section class="tabs-section">
+        <div class="tabs-header">
+            <div class="tabs-left">
+                <h2>Gain insights into<br>
+                    <span class="highlight">10 vital areas</span> of<br>
+                    your health
+                </h2>
+            </div>
+            <div class="tabs-right">
+                <h3>Measure what matters.</h3>
+                <p>Gain a holistic, in-depth view of how your heart, metabolism, and vital systems work together. In each test, an understanding of what matters for your long-term health.</p>
+            </div>
+        </div>
+
+        <div class="tabs-navigation">
+            <button class="tab-btn" data-tab="heart">Heart</button>
+            <button class="tab-btn" data-tab="metabolism">Metabolism</button>
+            <button class="tab-btn" data-tab="hormones">Hormones</button>
+            <button class="tab-btn" data-tab="inflammation">Inflammation & Stress</button>
+            <button class="tab-btn" data-tab="thyroid">Thyroid</button>
+            <button class="tab-btn" data-tab="kidney">Kidney</button>
+            <button class="tab-btn" data-tab="liver">Liver</button>
+            <button class="tab-btn active" data-tab="immune">Immune Defense</button>
+            <button class="tab-btn" data-tab="nutrients">Nutrients</button>
+            <button class="tab-btn" data-tab="blood">Blood</button>
+        </div>
+
+        <div class="tabs-content-wrapper">
+            <div class="tabs-content">
+                <!-- Heart Tab -->
+                <div class="tab-panel" data-panel="heart">
+                    <div class="health-card">
+                        <h3>Heart</h3>
+                        <p>Monitor cardiovascular health markers to keep your heart strong.</p>
+                    </div>
+                </div>
+
+                <!-- Metabolism Tab -->
+                <div class="tab-panel" data-panel="metabolism">
+                    <div class="health-card">
+                        <h3>Metabolism</h3>
+                        <p>Track how efficiently your body converts food into energy.</p>
+                    </div>
+                </div>
+
+                <!-- Hormones Tab -->
+                <div class="tab-panel" data-panel="hormones">
+                    <div class="health-card">
+                        <h3>Hormones</h3>
+                        <p>Understand your hormonal balance and its impact on overall health.</p>
+                    </div>
+                </div>
+
+                <!-- Inflammation & Stress Tab -->
+                <div class="tab-panel" data-panel="inflammation">
+                    <div class="health-card">
+                        <h3>Inflammation & Stress</h3>
+                        <p>Measure inflammation markers and stress indicators in your body.</p>
+                    </div>
+                </div>
+
+                <!-- Thyroid Tab -->
+                <div class="tab-panel" data-panel="thyroid">
+                    <div class="health-card">
+                        <h3>Thyroid</h3>
+                        <p>Check thyroid function and its role in metabolism and energy.</p>
+                    </div>
+                </div>
+
+                <!-- Kidney Tab -->
+                <div class="tab-panel" data-panel="kidney">
+                    <div class="health-card">
+                        <h3>Kidney</h3>
+                        <p>Assess kidney function and waste filtration efficiency.</p>
+                    </div>
+                </div>
+
+                <!-- Liver Tab -->
+                <div class="tab-panel" data-panel="liver">
+                    <div class="health-card">
+                        <h3>Liver</h3>
+                        <p>Evaluate liver health and detoxification capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Immune Defense Tab -->
+                <div class="tab-panel" data-panel="immune">
+                    <div class="health-card">
+                        <h3>Immune Defense</h3>
+                        <p>Get a read on your body's readiness to fight infections and recover.</p>
+                    </div>
+                </div>
+
+                <!-- Nutrients Tab -->
+                <div class="tab-panel" data-panel="nutrients">
+                    <div class="health-card">
+                        <h3>Nutrients</h3>
+                        <p>See if your nutrient levels are what they should be for your overall health.</p>
+                    </div>
+                </div>
+
+                <!-- Blood Tab -->
+                <div class="tab-panel" data-panel="blood">
+                    <div class="health-card">
+                        <h3>Blood</h3>
+                        <p>Assess cellular function by looking at red blood cell and platelet counts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-button-container">
+            <button class="cta-button">Start testing →</button>
+        </div>
+    </section>
+
+    <!-- Statistics Bento Grid Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <!-- 2.4 million+ card -->
+            <div class="stat-card stat-card-large">
+                <h3>2.4 million+</h3>
+                <p>customers trust care through Hims & Hers<sup>1</sup></p>
+            </div>
+
+            <!-- Doctor-trusted card -->
+            <div class="stat-card stat-card-large">
+                <h3>Doctor-trusted<br>treatment plans</h3>
+            </div>
+
+            <!-- 94% card with image -->
+            <div class="stat-card stat-card-hero">
+                <div class="stat-content">
+                    <h3>94%</h3>
+                    <p>of customers rate Hims & Hers equal to or better than in-person care<sup>2</sup></p>
+                </div>
+            </div>
+
+            <!-- Provider follow-ups card -->
+            <div class="stat-card stat-card-large">
+                <h3>Provider<br>follow-ups</h3>
+                <button class="cta-button-dark">Start testing →</button>
+            </div>
+
+            <!-- In-app content card -->
+            <div class="stat-card stat-card-large">
+                <h3>In-app<br>content</h3>
+                <div class="phone-mockup"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Who is Labs recommended for?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Labs is recommended for adults who want to take a proactive approach to their health. Whether you're looking to establish a health baseline, track changes over time, or get insights into specific health concerns, our comprehensive testing can help you make informed decisions about your wellness.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the lab testing process work?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>After signing up, you'll book an appointment at one of our 2000+ partner lab locations. A quick blood draw is all that's needed. Your results will be available in the app within days, along with personalized insights and recommendations from healthcare professionals.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do I need to visit a lab testing facility in person?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, you'll need to visit one of our partner lab locations for a blood draw. This ensures accurate results and proper sample handling. The process is quick, typically taking less than 15 minutes, and you can choose from thousands of convenient locations nationwide.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What do we test for?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We test for 130+ biomarkers across 10 vital health areas including heart health, metabolism, hormones, inflammation & stress, thyroid function, kidney health, liver function, immune defense, essential nutrients, and blood cell counts. This comprehensive panel checks indicators for over 1,000 conditions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is a virtual visit with a provider required?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A virtual visit is not required to get your lab results and insights. However, if you'd like to discuss your results in detail or explore treatment options, you can schedule an optional consultation with one of our licensed healthcare providers through the app.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is insurance required?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No insurance is required. Our service is designed to be straightforward with clear, upfront pricing at $499 per year for two comprehensive tests. This transparent pricing means no surprise bills or complicated insurance claims.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">perspectives</div>
+
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="legitscript-badge">
+                        <div style="font-weight: bold; margin-bottom: 5px;">LegitScript</div>
+                        <div>Certified</div>
+                        <div style="font-size: 2rem; color: #4ade80;">✓</div>
+                    </div>
+
+                    <div class="footer-links">
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#health-data">Consumer Health Data Privacy Policy</a>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <a href="#privacy-choices">Your privacy choices</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Perspectives Health. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
