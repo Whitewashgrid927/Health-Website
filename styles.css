@@ -332,6 +332,27 @@ button, a, .tab-btn, .faq-question {
     color: #d0d0d0;
 }
 
+.why-attend-button-container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.why-attend-button {
+    background: white;
+    color: #1a1a1a;
+    border: none;
+    padding: 16px 50px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.why-attend-button:hover {
+    background: #f0f0f0;
+}
+
 /* Responsive Why Attend Section */
 @media (max-width: 1024px) {
     .why-attend-grid {
@@ -369,6 +390,11 @@ button, a, .tab-btn, .faq-question {
     .why-attend-card p {
         font-size: 1rem;
     }
+
+    .why-attend-button {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -392,6 +418,15 @@ button, a, .tab-btn, .faq-question {
     .why-attend-card p {
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+
+    .why-attend-button-container {
+        margin-top: 40px;
+    }
+
+    .why-attend-button {
+        padding: 14px 40px;
+        font-size: 1rem;
     }
 }
 
