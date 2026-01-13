@@ -347,6 +347,8 @@ button, a, .tab-btn, .faq-question {
     cursor: pointer;
     font-weight: 500;
     transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .why-attend-button:hover {
