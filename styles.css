@@ -145,35 +145,86 @@ button, a, .tab-btn, .faq-question {
 .landing-content {
     position: relative;
     z-index: 2;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
 }
 
 .hero-text {
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.hero-text h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
+.hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
     margin-bottom: 1.5rem;
+    opacity: 0.9;
     font-weight: 400;
 }
 
-.hero-text p {
-    font-size: 1.1rem;
+.hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    max-width: 900px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
     line-height: 1.6;
-    max-width: 500px;
-    opacity: 0.95;
+    max-width: 700px;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-primary {
+    background: #1a1a1a;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Landing Video */
 .landing-video {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,24 +232,23 @@ button, a, .tab-btn, .faq-question {
 
 .landing-video video {
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design - Landing Section */
 @media (max-width: 1024px) {
-    .landing-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .hero-text h1 {
+        font-size: 3.5rem;
     }
 
-    .hero-text h1 {
-        font-size: 2.8rem;
+    .hero-description {
+        font-size: 1.1rem;
     }
 
     .landing-video video {
-        max-width: 500px;
+        max-width: 800px;
     }
 }
 
@@ -208,17 +258,33 @@ button, a, .tab-btn, .faq-question {
         min-height: auto;
     }
 
-    .hero-text {
-        text-align: center;
+    .landing-content {
+        gap: 50px;
     }
 
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
-    .hero-text p {
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-description {
         font-size: 1rem;
-        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
     }
 
     .landing-video video {
@@ -233,11 +299,21 @@ button, a, .tab-btn, .faq-question {
     }
 
     .hero-text h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
-    .hero-text p {
+    .hero-subtitle {
         font-size: 0.9rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 14px 32px;
+        font-size: 1rem;
     }
 
     .landing-video video {
