@@ -172,35 +172,18 @@ button, a, .tab-btn, .faq-question {
     opacity: 0.95;
 }
 
-/* Feature Cards */
-.feature-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+/* Landing Video */
+.landing-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.feature-card:first-child {
-    grid-column: 1 / -1;
-}
-
-.feature-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 12px;
-    color: white;
-}
-
-.feature-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.feature-card p {
-    font-size: 0.95rem;
-    opacity: 0.9;
-    line-height: 1.4;
+.landing-video video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design - Landing Section */
@@ -214,9 +197,8 @@ button, a, .tab-btn, .faq-question {
         font-size: 2.8rem;
     }
 
-    .feature-cards {
-        max-width: 600px;
-        margin: 0 auto;
+    .landing-video video {
+        max-width: 500px;
     }
 }
 
@@ -239,24 +221,9 @@ button, a, .tab-btn, .faq-question {
         margin: 0 auto;
     }
 
-    .feature-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-card:first-child {
-        grid-column: 1;
-    }
-
-    .feature-card {
-        padding: 24px;
-    }
-
-    .feature-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .feature-card p {
-        font-size: 0.9rem;
+    .landing-video video {
+        max-width: 100%;
+        border-radius: 16px;
     }
 }
 
@@ -273,16 +240,8 @@ button, a, .tab-btn, .faq-question {
         font-size: 0.9rem;
     }
 
-    .feature-card {
-        padding: 20px;
-    }
-
-    .feature-card h3 {
-        font-size: 1rem;
-    }
-
-    .feature-card p {
-        font-size: 0.85rem;
+    .landing-video video {
+        border-radius: 12px;
     }
 }
 
